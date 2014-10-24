@@ -18,12 +18,25 @@ class Model
     public function getFilms()
     {
         if ($this->pdo !== null) {
-            return $this->pdo->query('SELECT * FROM films');
+            return $this->pdo->query('SELECT * FROM `films`')->fetchAll();
         } else {
             return [
                 ['name' => 'Lord of the ring'],
                 ['name' => 'Star wars'],
             ];
         }
+    }
+
+    public function createFilm($variables) 
+    {
+        if ($this->pdo !== null) {
+            if (isset($variables['name'])) {
+                $sql = 'INSERT INTO films (name) VALUES (:name)';
+                $query = $this->pdo->prepare($sql);
+                $query->execute([':name' => $variables['name']]);
+                return $this->pdo->lastInsertId();
+            }
+        }
+        return false;
     }
 }

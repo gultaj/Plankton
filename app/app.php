@@ -4,7 +4,7 @@ include(__DIR__.'/autoload.php');
 
 return array(
     'controllers' => ['default', 'films'],
-    'model' => new \Model('cinema', 'root', 'root'),
+    'model' => new \Model('plankton', 'root', ''),
 
     'request' => [
         'parameters' => $_REQUEST,
