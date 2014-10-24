@@ -1,7 +1,7 @@
-<?php return array(
+<?php return [
     '/films' => function($app) {
-        return array('films',
+        return ['films',
             'films' => $app['model']->getFilms()
-        );
+        ];
     }
-);
+];

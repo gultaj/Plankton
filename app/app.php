@@ -3,11 +3,11 @@
 include(__DIR__.'/autoload.php');
 
 return array(
-    'controllers' => array('default', 'films'),
+    'controllers' => ['default', 'films'],
     'model' => new \Model('cinema', 'root', 'root'),
 
-    'request' => array(
+    'request' => [
         'parameters' => $_REQUEST,
         'method' => $_SERVER['REQUEST_METHOD'],
-    )
+    ]
 );

@@ -20,10 +20,10 @@ class Model
         if ($this->pdo !== null) {
             return $this->pdo->query('SELECT * FROM films');
         } else {
-            return array(
-                array('name' => 'Lord of the ring'),
-                array('name' => 'Star wars'),
-            );
+            return [
+                ['name' => 'Lord of the ring'],
+                ['name' => 'Star wars'],
+            ];
         }
     }
 }

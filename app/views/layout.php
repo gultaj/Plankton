@@ -2,14 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="<?php echo asset('/bootstrap/css/bootstrap.min.css'); ?>" />
-        <link rel="stylesheet" href="<?php echo asset('/css/style.css'); ?>" />
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
         <title>Plankton example</title>
     </head>
     <body>
-        <?php render('header', array(), false); ?>
+        <?php render('header'); ?>
 
-        <?php include(__DIR__.'/'.$page.'.php'); ?>
+        <?php render($page); ?>
 
         <hr/>
 
